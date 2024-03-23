@@ -1,17 +1,35 @@
 print("Hello and welcome to my little stupid game.")
 
-var = input("Give me a word: ") 
+while True:
+    
+    vir = input("Give me a word: ") 
+    var = vir.upper()
+    
+     #bei leerzeichen zusammenschreiben lassen oder so
+     
+    print("You choose %s" %var)
+
+    blanks = list("_" * len(var))
+
+    while "_" in blanks:
+        
+     litter = input("Gimme a letter, that is part of the word: ")
+     letter = litter.upper()
 
 
-print("You choose " + var)
-
-L = len(var)
-
-print("_" * L)
-
-test = input("Gimme a letter, that is part of the word: ")
-
-if test in var:
-    print("true")
-else:
-    print("false")
+     if letter in var:
+         
+            for i, j in enumerate(var):
+               if j == letter:
+                blanks[i] = j
+             
+            print("true")
+            print(" ".join(blanks))
+    
+     else:
+         
+            print("false")
+            print(" ".join(blanks))
+            
+     
+    print("You guessed the word, well played! Ready for another round?")
