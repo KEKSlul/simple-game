@@ -10,6 +10,8 @@ while True:
     print("You choose %s" %var)
 
     blanks = list("_" * len(var))
+    
+    death = 0
 
     while "_" in blanks:
         
@@ -30,6 +32,7 @@ while True:
          
             print("false")
             print(" ".join(blanks))
-            
+            death = death+1
+            print("schon %d mal versagt" %death)
      
     print("You guessed the word, well played! Ready for another round?")
