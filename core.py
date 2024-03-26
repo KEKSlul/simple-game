@@ -34,5 +34,6 @@ while True:
             print(" ".join(blanks))
             death = death+1
             print("schon %d mal versagt" %death)
+            from grafik import hangman
      
     print("You guessed the word, well played! Ready for another round?")
